@@ -1,5 +1,25 @@
 # amd-resolve
 
+Implements the [AMD](https://github.com/amdjs/amdjs-api/wiki/AMD) module
+resolution algorithm, and supports [common config](https://github.com/amdjs/amdjs-api/wiki/Common-Config).
+
+The purpose of this module is to assist AMD tooling, including optimizers and
+compilers, that need to perform module resolution during a build step or as part
+of an application server.
+
+This is analogous to [James Halliday](http://substack.net/)'s [resolve](https://github.com/substack/node-resolve),
+which implements [Node](http://nodejs.org/)'s algorithm.
+
+## Installation
+
+    $ npm install amd-resolve
+
+## Usage
+
+Synchronously lookup the location of module `bar`, using options defined by
+[common config](https://github.com/amdjs/amdjs-api/wiki/Common-Config).
+
+    resolve.sync('bar', { baseUrl: 'webapp/lib' })
 
 ## Tests
 
