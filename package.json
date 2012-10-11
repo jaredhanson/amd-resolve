@@ -1,0 +1,29 @@
+{
+  "name": "amd-resolve",
+  "version": "0.1.0",
+  "description": "A hookable AMD module resolution implementation.",
+  "keywords": ["modules", "require", "resolve", "amd", "requirejs"],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/jaredhanson/amd-resolve.git"
+  },
+  "bugs": {
+    "url": "http://github.com/jaredhanson/amd-resolve/issues"
+  },
+  "author": { "name": "Jared Hanson", "email": "jaredhanson@gmail.com", "url": "http://www.jaredhanson.net/" },
+  "licenses": [ {
+    "type": "MIT",
+    "url": "http://www.opensource.org/licenses/MIT" 
+  } ],
+  "main": "./lib",
+  "dependencies": {
+  },
+  "devDependencies": {
+    "mocha": "1.x.x",
+    "should": "1.x.x"
+  },
+  "scripts": {
+    "test": "NODE_PATH=lib node_modules/.bin/mocha"
+  },
+  "engines": { "node": ">= 0.6.0" }
+}
