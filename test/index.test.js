@@ -278,10 +278,25 @@ describe('resolve.sync', function() {
 describe('resolve.special', function() {
   
   it('should specify special dependencies', function() {
-    resolve.special.should.have.length(3);
-    resolve.special[0].should.be.equal('require');
-    resolve.special[1].should.be.equal('exports');
-    resolve.special[2].should.be.equal('module');
+    Object.keys(resolve.special).should.have.length(3);
+    resolve.special['require'].should.be.true;
+    resolve.special['exports'].should.be.true;
+    resolve.special['module'].should.be.true;
   })
   
 })
+
+describe('resolve.isSpecial', function() {
+  
+  it('should return true for special dependencies', function() {
+    resolve.isSpecial('require').should.be.true;
+    resolve.isSpecial('exports').should.be.true;
+    resolve.isSpecial('module').should.be.true;
+  })
+  
+  it('should be aliased to isCore', function() {
+    resolve.isSpecial.should.be.equal(resolve.isCore)
+  })
+  
+})
+
