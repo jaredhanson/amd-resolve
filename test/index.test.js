@@ -294,9 +294,5 @@ describe('resolve.isSpecial', function() {
     resolve.isSpecial('module').should.be.true;
   })
   
-  it('should be aliased to isCore', function() {
-    resolve.isSpecial.should.be.equal(resolve.isCore)
-  })
-  
 })
 
